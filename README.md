@@ -1,4 +1,4 @@
-# 🚀🚀 CS336-From-Scratch 🚀🚀
+# <p align="center"> 🚀🚀 CS336-From-Scratch 🚀🚀 </p>
 
 > The NoteBook and Assignments implemention via Learning CS336
 
