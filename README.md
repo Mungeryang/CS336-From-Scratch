@@ -4,7 +4,8 @@
 
 课程主页：https://cs336.stanford.edu/
 
-![cs336](https://www.xiaoqiedun.com/posts/2025-05-15-cs336/images/image-20250515120333302.png)
+![cs336](https://miro.medium.com/v2/resize:fit:1400/1*N9A3rarbj3waA7LWn3TFwg.png)
+
 
 ## 📔 NoteBook
 
