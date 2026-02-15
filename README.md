@@ -14,7 +14,7 @@
 | Lecture01 | Overview, tokenization         | ✅      |
 | Lecture02 | PyTorch, Resource accounting   | ✅      |
 | Lecture03 | Architectures, hyperparameters | ✅      |
-| Lecture04 | Mixture of experts             | 🖌️      |
+| Lecture04 | Mixture of experts             | ✅      |
 | Lecture05 | GPUs                           | 🖌️      |
 | ...       |                                |        |
 
