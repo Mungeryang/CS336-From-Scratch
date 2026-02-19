@@ -16,7 +16,9 @@
 | Lecture03 | Architectures, hyperparameters | ✅      |
 | Lecture04 | Mixture of experts             | ✅      |
 | Lecture05 | GPUs                           | ✅      |
-| ...       |                                |        |
+| Lector06  | Kernels, Triton                | ✅      |
+| Lector07  | Parallelism                    |        |
+| ...       | ...                            |        |
 
 
 
