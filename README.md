@@ -18,7 +18,11 @@
 | Lecture05 | GPUs                           | ✅      |
 | Lector06  | Kernels, Triton                | ✅      |
 | Lector07  | Parallelism                    | ✅      |
-| ...       | ...                            |        |
+| Lector08  | Scaling laws                   | ❌      |
+| Lector09  | Evaluation                     | ❌      |
+| Lector10  | Data                           | ❌      |
+| Lector11  | Alignment - SFT/RLHF           | ❌      |
+| Lector12  | Alignment - RL                 | ❌      |
 
 
 
