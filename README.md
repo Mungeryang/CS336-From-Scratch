@@ -1,6 +1,6 @@
 # <p align="center"> 🚀🚀 CS336-From-Scratch 🚀🚀 </p>
 
-> The NoteBook and Assignments implemention via Learning CS336
+> The NoteBook and Assignments implemention via Learning CS336，Looking forward to the Spring 2026！
 
 课程主页：https://cs336.stanford.edu/
 
@@ -9,20 +9,20 @@
 
 ## 📔 NoteBook
 
-| Chapter   | Content                        | Status |
-| --------- | ------------------------------ | ------ |
-| Lecture01 | Overview, tokenization         | ✅      |
-| Lecture02 | PyTorch, Resource accounting   | ✅      |
-| Lecture03 | Architectures, hyperparameters | ✅      |
-| Lecture04 | Mixture of experts             | ✅      |
-| Lecture05 | GPUs                           | ✅      |
-| Lector06  | Kernels, Triton                | ✅      |
-| Lector07  | Parallelism                    | ✅      |
-| Lector08  | Scaling laws                   | ❌      |
-| Lector09  | Evaluation                     | ❌      |
-| Lector10  | Data                           | ❌      |
-| Lector11  | Alignment - SFT/RLHF           | ❌      |
-| Lector12  | Alignment - RL                 | ❌      |
+|  Chapter  |            Content             | Status |
+| :-------: | :----------------------------: | :----: |
+| Lecture01 |     Overview, tokenization     |   ✅    |
+| Lecture02 |  PyTorch, Resource accounting  |   ✅    |
+| Lecture03 | Architectures, hyperparameters |   ✅    |
+| Lecture04 |       Mixture of experts       |   ✅    |
+| Lecture05 |              GPUs              |   ✅    |
+| Lector06  |        Kernels, Triton         |   ✅    |
+| Lector07  |          Parallelism           |   ✅    |
+| Lector08  |          Scaling laws          |   ❌    |
+| Lector09  |           Evaluation           |   ❌    |
+| Lector10  |              Data              |   ❌    |
+| Lector11  |      Alignment - SFT/RLHF      |   ❌    |
+| Lector12  |         Alignment - RL         |   ❌    |
 
 
 
