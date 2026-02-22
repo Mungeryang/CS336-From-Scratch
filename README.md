@@ -1,6 +1,6 @@
 # <p align="center"> 🚀🚀 CS336-From-Scratch 🚀🚀 </p>
 
-> The NoteBook and Assignments implemention via Learning CS336，Looking forward to the Spring 2026！
+> The NoteBook and Assignments implemention via Learning CS336 Spring 2026！
 
 课程主页：https://cs336.stanford.edu/
 
