@@ -82,7 +82,7 @@ cd ..
 
 进行预分词处理前，需要先从预料库中提出所有特殊的标记符号，确保分词时以特殊标记为界，避免其界定的文本区域发生合并现象。
 
-<img src="results_img/train_bpe.png">
+<img src="../../results_img/train_bpe.png">
 
 ## ✨ What You Build In Assignment 1
 
