@@ -79,6 +79,7 @@ class Tiny_BPETokenizer:
         
         
     def _build_special_pattern(self) -> re.Pattern | None:
+        """转义 special token 并进行切段"""
         if not self.special_tokens:
             return None
         
@@ -88,6 +89,7 @@ class Tiny_BPETokenizer:
         return pattern
     
     def _is_special_token(self, part: str):
+        """判断是否有 special token"""
         return part in self.special_tokens
     
     def _split_special_tokens(self, text: str):
@@ -141,11 +143,12 @@ class Tiny_BPETokenizer:
         return tokens
 
     def _token_bytes_to_ids(self, tokens: list[bytes]):
-        
+        """二进制字节码 到 整数ID 映射"""
         return [self.token_to_id[tok] for tok in tokens]
         
     
     def _encode_normal_text(self, text: str):
+        """编码除special tokens外的文本"""
         pretokens = self._pretokenize(text)
         all_ids = []
         
@@ -156,6 +159,7 @@ class Tiny_BPETokenizer:
         return all_ids
     
     def encode(self, text: str):
+        """编码全部输入文本"""
         if text == "":
             return []
         
@@ -181,5 +185,6 @@ class Tiny_BPETokenizer:
     
     
     def decode(self, ids: list[int]):
+        """编码序列整数ID"""
         seq_bytes = b"".join(self.vocab[i] for i in ids)
         return seq_bytes.decode("utf-8", errors="replace")
