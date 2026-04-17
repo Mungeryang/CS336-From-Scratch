@@ -36,6 +36,14 @@
 - Implement all of the components (tokenizer, model architecture, optimizer) necessary to train a standard Transformer language model
 - Train a minimal language model
 
+#### Test train_bpe
+
+<img src="results_img/train_bpe.png">
+
+
+#### Test tokenizer
+
+<img src="results_img/tokenizer2.png">
 
 
 ### Assignment 2: Systems
