@@ -57,32 +57,20 @@ gunzip owt_valid.txt.gz
 
 cd ..
 ```
- 
-## BPE Tokenizer Training
 
->> BPE训练的核心三大流程：1.初始化Vocab -> 2.预分词  -> 3.合并
+## Test train_bpe
 
-### Vocabulary initialization
-
-将语料库中的文本数据通过UTF-8编码转换为二进制字节码，分词器词汇表是从 字节串token 到 整数ID 的一对一映射。由于我们正在训练一个字节级BPE分词器，初始词汇表就是所有字节的集合。
-
-
-### Pre-Tokenization
-
-预分词过程先用标点符号去切分字符串，分词的目标或者说要达到的效果就没一个子词不能随意跨越到不同的子词字符串中。 
-
-
-### Merge
-
-将出现频率最高的“字节对”合并，然后重新迭代语料库
-
-### Special Tokens
-
-某些字符串(`<|endoftext|>`、`心源性猝死`)是用来编码元数据的，固定不拆分。Special Tokens需要被添加到词汇表中，而且要具有对应的整数ID映射。
-
-进行预分词处理前，需要先从预料库中提出所有特殊的标记符号，确保分词时以特殊标记为界，避免其界定的文本区域发生合并现象。
+[BPE Implementation](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/train_bpe.py)
 
 <img src="../../results_img/train_bpe.png">
+
+
+## Test tokenizer
+
+[Tiny_BPETokenizer Class Implementation](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/train_bpe.py)
+
+<img src="../../results_img/tokenizer2.png">
+
 
 ## ✨ What You Build In Assignment 1
 
@@ -475,4 +463,34 @@ A good mental model for Assignment 1 is:
 - then make experiments reproducible.
 
 If you keep each stage small and testable, the assignment remains very manageable. If you skip straight to end-to-end training, debugging becomes significantly harder.
+
+
+
+
+ 
+## BPE Tokenizer Training
+
+>> BPE训练的核心三大流程：1.初始化Vocab -> 2.预分词  -> 3.合并
+
+### Vocabulary initialization
+
+将语料库中的文本数据通过UTF-8编码转换为二进制字节码，分词器词汇表是从 字节串token 到 整数ID 的一对一映射。由于我们正在训练一个字节级BPE分词器，初始词汇表就是所有字节的集合。
+
+
+### Pre-Tokenization
+
+预分词过程先用标点符号去切分字符串，分词的目标或者说要达到的效果就没一个子词不能随意跨越到不同的子词字符串中。 
+
+
+### Merge
+
+将出现频率最高的“字节对”合并，然后重新迭代语料库
+
+### Special Tokens
+
+某些字符串(`<|endoftext|>`、`心源性猝死`)是用来编码元数据的，固定不拆分。Special Tokens需要被添加到词汇表中，而且要具有对应的整数ID映射。
+
+进行预分词处理前，需要先从预料库中提出所有特殊的标记符号，确保分词时以特殊标记为界，避免其界定的文本区域发生合并现象。
+
+<img src="../../results_img/train_bpe.png">
 
