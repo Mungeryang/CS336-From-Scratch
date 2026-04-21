@@ -8,6 +8,7 @@ import numpy.typing as npt
 import torch
 from jaxtyping import Bool, Float, Int
 from torch import Tensor
+from torch._subclasses.fake_tensor import inferred_fake_kernel_from_real_out
 
 
 def run_linear(
@@ -28,8 +29,16 @@ def run_linear(
     Returns:
         Float[Tensor, "... d_out"]: The transformed output of your linear module.
     """
-
-    raise NotImplementedError
+    from cs336_basics.linear import Linear
+    
+    linear = Linear(
+        d_in,
+        d_out,
+        device=weights.device,
+        dtype=weights.dtype
+    )
+    linear.load_state_dict({"weight": weights})
+    return linear(in_features)
 
 
 def run_embedding(
@@ -50,8 +59,17 @@ def run_embedding(
     Returns:
         Float[Tensor, "... d_model"]: Batch of embeddings returned by your Embedding layer.
     """
-
-    raise NotImplementedError
+    from cs336_basics.embedding import Embedding
+    
+    embedding = Embedding(
+        vocab_size,
+        d_model,
+        device=weights.device,
+        dtype=weights.dtype
+    )
+    embedding.load_state_dict({"weigths": weights})
+    
+    return embedding(token_ids)
 
 
 def run_swiglu(
