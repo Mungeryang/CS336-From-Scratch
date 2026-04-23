@@ -14,23 +14,9 @@ Class HomePage：https://cs336.stanford.edu/
 
 ![cs336](https://miro.medium.com/v2/resize:fit:1400/1*N9A3rarbj3waA7LWn3TFwg.png)
 
+## 🧐100 $QA_{s}$ ON LLM - 大模型面试100问
 
-## 📔 NoteBook
-
-|  Chapter  |            Content             | Status |
-| :-------: | :----------------------------: | :----: |
-| Lecture01 |     Overview, tokenization     |   ✅    |
-| Lecture02 |  PyTorch, Resource accounting  |   ✅    |
-| Lecture03 | Architectures, hyperparameters |   ✅    |
-| Lecture04 |       Mixture of experts       |   ❌    |
-| Lecture05 |              GPUs              |   ❌    |
-| Lector06  |        Kernels, Triton         |   ❌    |
-| Lector07  |          Parallelism           |   ❌    |
-| Lector08  |          Scaling laws          |   ❌    |
-| Lector09  |           Evaluation           |   ❌    |
-| Lector10  |              Data              |   ❌    |
-| Lector11  |      Alignment - SFT/RLHF      |   ❌    |
-| Lector12  |         Alignment - RL         |   ❌    |
+> ### 通过整理 `Standford CS336 Spring26` 课堂笔记，总结大模型算法经典面试**100**问
 
 
 
@@ -46,30 +32,39 @@ Class HomePage：https://cs336.stanford.edu/
 | :-------: | :--------: | :----: |
 | train_bpe |     ✅     |   [BPE Implementation](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/train_bpe.py)   |
 | BPETokenizer |  ✅     |   [Tiny_BPETokenizer Class Implementation](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/train_bpe.py)    |
-|  Linear   |    ing     |         |
-| Emebdding |     ❌     |         |
-| RMSNorm   |     ❌     |         |
-| Swiglu    |     ❌     |         |
-| RoPE      |     ❌     |         |
-| softmax   |     ❌     |         |
-| attention |     ❌     |         |
-| mul-attn  |     ❌     |         |
-| LM block  |     ❌     |         |
-| cross-entropy |  ❌    |         |
-| AdamW     |  ❌        |         |
+|  Linear   |    ✅      |[Linear Class](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/linear.py)         |
+| Emebdding |     ✅     | [EMbedding Class](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/embedding.py)        |
+| RMSNorm   |     ✅     | [RMSNorm](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/rmsnorm.py)        |
+| Swiglu    |     ✅     | [SwiGLU FFN](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/swiglu.py)        |
+| RoPE      |     ✅     | [RoPE Class](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/rope.py)        |
+| softmax   |     ✅     | [softmax funcion](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/rope.py)        |
+| attention |     ✅     | [Scaled_Dot_Attn](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/scaled_dot_product_attention.py)        |
+| mul-attn  |     ✅     | [MultiHeadAttn Class](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/multihead_self_attention.py)        |
+| LM block  |     ✅     | [Transformer Block](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/transformer_block.py)       |
+| cross-entropy |  ✅    | [train function](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/tests/adapters.py)        |
+| AdamW     |  ✅        | [Adamw optimizer](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/adamw.py)        |
+
+### ⌨️ Assignment 1: Results
 
 #### Test train_bpe
 
-[BPE Implementation](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/train_bpe.py)
-
 <img src="results_img/train_bpe.png">
 
-
-#### Test tokenizer
-
-[Tiny_BPETokenizer Class Implementation](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/blob/main/Assignment/assignment1-basics/cs336_basics/train_bpe.py)
+#### Test Tokenizer
 
 <img src="results_img/tokenizer2.png">
+
+#### Test Transformer_LM
+
+<img src="results_img/test_model.png">
+
+#### Test Utils and Optimizer
+
+<img src="results_img/utils_optimizer.png">
+
+#### Test DataLoader and Checkpoint
+
+<img src="results_img/data_loader.png">
 
 
 ### Assignment 2: Systems
