@@ -12,12 +12,20 @@
 
 Class HomePage：https://cs336.stanford.edu/
 
+**图解大模型架构**参见：[Hand-Drawn-LLM](https://github.com/Mungeryang/Hand-Drawn-LLM)
+
 ![cs336](https://miro.medium.com/v2/resize:fit:1400/1*N9A3rarbj3waA7LWn3TFwg.png)
 
-## 🧐100 $QA_{s}$ ON LLM - 大模型面试100问
+## 🧐100 $QA_{s}$ About LLM - 大模型面试100问
 
-> ### 通过整理 `Standford CS336 Spring26` 课堂笔记，总结大模型算法经典面试**100**问
+> ### 通过整理 `Standford CS336 Spring26` 课堂笔记，总结大模型算法经典面试**50**问
 
+> 参考资料: CS336课堂笔记、[李博杰老师 - 大模型面试题 200 问](https://www.ituring.com.cn/book/3285)、[百面大模型](https://www.ptpress.com.cn/publishing/book/ef639cdb-d2a9-4987-8c79-14760baa4fc3)、[大模型技术30讲](https://github.com/ningg/Machine-Learning-Q-and-AI)
+
+
+⭐️⭐️⭐️ [50问整理](https://github.com/Mungeryang/CS336-From-Scratch-Spring2026/tree/main/NoteBook)
+
+P.S. 由于精力和能力有限，仅整理出我本人认为较为经典的50问。问题与作答全部开源，欢迎任何感兴趣的人fork更新～ 👏👏👏
 
 
 
