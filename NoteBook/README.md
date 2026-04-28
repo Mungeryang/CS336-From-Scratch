@@ -52,7 +52,7 @@ $$ \mathrm{RMS}(x) = \sqrt{\frac{1}{d}\sum_{i=1}^{d} x_i^2 + \epsilon} $$
 
 #### Trick 1 
 
-模型最后输出的是 `logits`，需要先经过 **softmax** 转成词表上的概率分布，才能进行采样。在 softmax 前把 logits 除以温度参数 $$ \tau $$ 进行**温度缩放** :
+模型最后输出的是 `logits`，需要先经过 **softmax** 转成词表上的概率分布，才能进行采样。在 softmax 前把 logits 除以温度参数 $ \tau $ 进行**温度缩放** :
 
 $$ \mathrm{softmax}(v, \tau)_i = \frac{\exp(v_i / \tau)}{\sum_{j=1}^{|\mathrm{vocab}|} \exp(v_j / \tau)} $$
 
