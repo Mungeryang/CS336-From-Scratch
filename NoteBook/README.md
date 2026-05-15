@@ -58,6 +58,42 @@ byte-level BPE 的核心优势可以概括为**兼顾了开放词表能力和较
 - Loss Landscape 更平坦、更凸，优化器更容易找到好的局部最小值
 
 
+### LLM架构中常用的损失函数和激活函数
+
+#### 激活函数 
+
+1. ReLU 系列（早期标准）
+
+ReLU(x) = max(0, x)
+
+使用：原始 Transformer（2017）、ResNet
+
+特点：简单、稀疏激活，问题是负半轴完全杀死梯度。
+
+2. GELU —— GPT-3/BERT 的选择
+
+GELU(x) = x · Φ(x)  其中 Φ 是标准正态分布的 CDF
+
+3. SwiGLU —— 现代 LLM 的标配（LLaMA/Qwen/Mistral）
+
+SwiGLU(x, W, V, W₂) = (Swish(xW) ⊙ xV) · W₂
+
+Swish(x) = x · σ(x) = x · sigmoid(x)
+
+使用：LLaMA 1/2/3、PaLM、Mistral、Qwen、DeepSeek
+
+特点：带门控的激活函数。它其实是两个线性投影做 element-wise 乘法后再投影回去。参数量是标准 FFN 的 1.5 倍（因为有 3 个 W），但效果更好
+
+#### 损失函数
+
+1. 自回归语言建模损失（Causal LM Loss）
+
+L = -Σ log p(tᵢ | t<ᵢ)
+
+使用：所有 LLM（GPT、LLaMA、Mistral、Qwen）
+
+本质：标准 cross-entropy，但 attention 掩码是因果的——每个 token 只能看到自己和前面的 token；这是 LLM 最核心的损失函数，所有预训练都是用这个。
+
 
 
 ## Topic 3: Model Architecture
