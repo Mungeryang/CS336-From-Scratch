@@ -86,13 +86,37 @@ Swish(x) = x · σ(x) = x · sigmoid(x)
 
 #### 损失函数
 
-1. 自回归语言建模损失（Causal LM Loss）
+1. 自回归语言建模损失(Causal LM Loss)
 
 L = -Σ log p(tᵢ | t<ᵢ)
 
 使用：所有 LLM（GPT、LLaMA、Mistral、Qwen）
 
 本质：标准 cross-entropy，但 attention 掩码是因果的——每个 token 只能看到自己和前面的 token；这是 LLM 最核心的损失函数，所有预训练都是用这个。
+
+2. 对比损失(InfoNCE)
+
+$$ \mathcal{L}_i^{\text{image}} = -\log \frac{\exp(\text{sim}(I_i, T_i) / \tau)}{\sum_{j=1}^{N} \exp(\text{sim}(I_i, T_j) / \tau)} $$
+
+使用：CLIP、SigLIP、几乎所有双塔视觉-语言模型
+
+本质：N 个正样本对 + N²-N 个负样本对的 softmax 分类
+
+3. DPO Loss
+
+$$ \mathcal{L}_{\text{DPO}}(\pi_\theta; \pi_{\text{ref}}) = -\mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}} \left[ \log \sigma \left( \beta \log \frac{\pi_\theta(y_w \mid x)}{\pi_{\text{ref}}(y_w \mid x)} - \beta \log \frac{\pi_\theta(y_l \mid x)}{\pi_{\text{ref}}(y_l \mid x)} \right) \right] $$
+
+使用：LLaMA 2/3、Mistral、Qwen 的偏好对齐阶段
+
+本质：在 RLHF 之后提出的简化方案，直接用偏好对优化策略模型，不需要训练 reward model
+
+4. KL散度
+
+$$ \mathcal{L}_{\text{KL}} = D_{\text{KL}}(\pi_\theta \parallel \pi_{\text{ref}}) = \mathbb{E}_{x \sim \pi_\theta} \left[ \log \frac{\pi_\theta(x)}{\pi_{\text{ref}}(x)} \right] $$
+
+使用：RLHF 的约束项、DPO 的隐式约束、知识蒸馏
+
+本质：防止模型在优化过程中偏离原始预训练分布太远，避免"reward hacking"
 
 
 
