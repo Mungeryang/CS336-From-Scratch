@@ -39,6 +39,10 @@ byte-level BPE 的核心优势可以概括为**兼顾了开放词表能力和较
 
 ### 残差的作用是什么？
 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3osQSRVUQ8k0JqVMNFi_w4xKrk1CUn5PfbQ&s">
+
+
+
 残差连接 = y = x + F(x)
 
 如果没有残差连接，一个神经网络在反向传播的过程中：
