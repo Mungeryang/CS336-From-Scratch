@@ -98,6 +98,10 @@ $$ \mathrm{softmax}(v, \tau)_i = \frac{\exp(v_i / \tau)}{\sum_{j=1}^{|\mathrm{vo
 
 <img src="https://i-blog.csdnimg.cn/blog_migrate/d4d8a8327721f8368e1bce5f0a1b2096.png">
 
+- Post-norm: y = LayerNorm(x + Attention(x))
+
+- Pre-norm: y = x + Attention(LayerNorm(x))
+
 Transformer Block 包括两个主要的sub-layers: multi-head self-attn mechanism(MHA) 和 position-wise feed-forward netword(FFN)。
 
 结构区别：Post-norm 在残差连接相加后进行 LayerNorm；Pre-norm 则是在进入自注意力或前馈网络之前进行 LayerNorm 。(区别如上图所示，重点抓住两个核心层即可)
