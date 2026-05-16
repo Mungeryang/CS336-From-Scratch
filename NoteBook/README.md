@@ -41,8 +41,6 @@ byte-level BPE 的核心优势可以概括为**兼顾了开放词表能力和较
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3osQSRVUQ8k0JqVMNFi_w4xKrk1CUn5PfbQ&s">
 
-
-
 残差连接 = y = x + F(x)
 
 如果没有残差连接，一个神经网络在反向传播的过程中：
@@ -122,6 +120,13 @@ $$ \mathcal{L}_{\text{KL}} = D_{\text{KL}}(\pi_\theta \parallel \pi_{\text{ref}}
 
 本质：防止模型在优化过程中偏离原始预训练分布太远，避免"reward hacking"
 
+### 怎么理解CLIP模型训练过程中的对齐？与LLaVA中的阶段1的对齐机制一样吗？
+
+CLIP对齐的本质是对比学习：让匹配的图文对在嵌入空间中靠近，不匹配的图文对距离拉远。	
+
+图像和文本最后都要经过一层投影层到同一个维度，之后再进行相似度计算和比较。
+
+LLaVA中 Stage1 的对齐机制属于微调一个简单的线性层，使得视觉特征的输出能够对齐语言模型的输入。直白来讲，视觉编码器的输出维度与语言解码器的输入维度并不是同一个，需要进行线性映射使得视觉特征维度转换为文本维度。
 
 
 ## Topic 3: Model Architecture
